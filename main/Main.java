@@ -2,14 +2,14 @@ package main;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
-import shapes.ModifiedFractalTree;
+import shapes.FractalWave;
 
 public class Main {
     private Frame frame;
     private Drawable currentShape;
 
     public Main() {
-        currentShape = new ModifiedFractalTree(this);
+        currentShape = new FractalWave(this);
         frame = new Frame(currentShape.getName());
 
         BufferStrategy bs = frame.getBufferStrategy();
@@ -22,11 +22,11 @@ public class Main {
         while (true) {
             Graphics g = bs.getDrawGraphics();
 
-            g.setColor(Color.BLACK);
+            g.setColor(new Color(223, 242, 255));
             g.clearRect(0, 0, frame.getWidth(), frame.getHeight());
             g.fillRect(0, 0, frame.getWidth(), frame.getHeight());
 
-            g.setColor(Color.WHITE);
+            g.setColor(new Color(37, 96, 210));
             currentShape.draw(g);
 
             g.dispose();

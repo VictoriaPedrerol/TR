@@ -6,10 +6,10 @@ import main.Drawable;
 import main.Shape;
 import main.Main;
 
-public class ModifiedFractalTree implements Shape, Drawable {
+public class FractalTree implements Shape, Drawable {
     private Main main;
 
-    public ModifiedFractalTree(Main main) {
+    public FractalTree(Main main) {
         this.main = main;
     }
 
@@ -30,7 +30,7 @@ public class ModifiedFractalTree implements Shape, Drawable {
 
     @Override
     public String getName() {
-        return "Modified Fractal Tree";
+        return "Fractal Tree";
     }
 
     @Override
