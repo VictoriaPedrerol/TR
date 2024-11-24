@@ -3,13 +3,20 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import shapes.FractalWave;
+import shapes.FractalWavecopy;
+import shapes.FractalTree;
 
 public class Main {
     private Frame frame;
     private Drawable currentShape;
+    private Drawable FractalWave; 
+    private Drawable FractalTree;
 
     public Main() {
-        currentShape = new FractalWave(this);
+        currentShape = new FractalWavecopy(this);
+        FractalWave = new FractalWave(null);
+        FractalTree= new FractalTree(null);
+        
         frame = new Frame(currentShape.getName());
 
         BufferStrategy bs = frame.getBufferStrategy();
