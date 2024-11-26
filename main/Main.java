@@ -2,7 +2,7 @@ package main;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
-import shapes.FractalWave;
+import shapes.FractalTree;
 
 public class Main {
     private Frame frame;
@@ -10,7 +10,7 @@ public class Main {
 
 
     public Main() {
-        currentShape = new FractalWave(this);
+        currentShape = new FractalTree(this);
 
         frame = new Frame(currentShape.getName());
 
@@ -24,11 +24,11 @@ public class Main {
         while (true) {
             Graphics g = bs.getDrawGraphics();
 
-            g.setColor(new Color(223, 242, 255));
+            g.setColor(Color.BLACK);
             g.clearRect(0, 0, frame.getWidth(), frame.getHeight());
             g.fillRect(0, 0, frame.getWidth(), frame.getHeight());
 
-            g.setColor(new Color(37, 96, 210));
+            g.setColor(Color.WHITE);
             currentShape.draw(g);
 
             g.dispose();
